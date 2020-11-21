@@ -1,0 +1,13 @@
+name: utils
+description: A dart package containing useful utils.
+version: 0.0.1
+homepage: https://begnis.dev
+repository: https://github.com/Dimibe/utils
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+
+dev_dependencies:
+  test: ^1.15.6
