@@ -1,0 +1,12 @@
+name: example
+description: Example project for dartlang_utils package.
+
+environment:
+  sdk: '>=2.8.1 <3.0.0'
+
+dependencies:
+  dartlang_utils:
+        path: ../
+
+dev_dependencies:
+  pedantic: ^1.9.2
