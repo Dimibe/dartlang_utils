@@ -7,18 +7,18 @@ A dart package containing useful utils.
  Add the package to your pubspec.yaml:
 
  ```yaml
- utils: ^0.0.1
+ dartlang_utils: ^0.0.1
  ```
  
  In your dart file, import the library:
 
  ```Dart
-import 'package:utils/utils.dart';
+import 'package:dartlang_utils/dartlang_utils.dart';
  ```
  If you want to use a specific util only you can use the `show` keyword:
 
  ```Dart
-import 'package:utils/utils.dart' show StringUtils;
+import 'package:dartlang_utils/dartlang_utils.dart' show StringUtils;
  ```
 
 
