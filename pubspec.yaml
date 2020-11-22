@@ -1,8 +1,9 @@
-name: utils
+name: dartlang_utils
 description: A dart package containing useful utils.
 version: 0.0.1
 homepage: https://begnis.dev
-repository: https://github.com/Dimibe/utils
+repository: https://github.com/Dimibe/dartlang_utils
+
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

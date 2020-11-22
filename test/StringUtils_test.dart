@@ -1,5 +1,5 @@
+import 'package:dartlang_utils/dartlang_utils.dart';
 import 'package:test/test.dart';
-import 'package:utils/utils.dart';
 
 void main() {
   test('isEmpty', () {
