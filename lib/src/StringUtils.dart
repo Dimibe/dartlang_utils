@@ -3,7 +3,7 @@ class StringUtils {
 
   /// Null safe check if string is empty.
   /// See [String.isEmpty]
-  static bool isEmpty(final String str) {
+  static bool isEmpty(String str) {
     return str == null || str.isEmpty;
   }
 
