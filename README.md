@@ -7,7 +7,7 @@ A dart package containing useful utils.
  Add the package to your pubspec.yaml:
 
  ```yaml
- dartlang_utils: ^0.0.2
+ dartlang_utils: ^0.1.0-nullsafety.0
  ```
  
  In your dart file, import the library:
