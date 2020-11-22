@@ -93,4 +93,26 @@ class StringUtils {
     }
     return str1.compareTo(str2);
   }
+
+  /// Calculates the hamming distance between two strings.
+  /// The hamming distance is the number of positions where two strings have
+  /// different chars.
+  ///
+  /// Therefoer both string must have the same length and must be not null.
+  static int hammingDistance(String str1, String str2) {
+    if (str1.length != str2.length) {
+      throw FormatException('Strings must have the same length');
+    }
+
+    var l1 = str1.runes.toList();
+    var l2 = str2.runes.toList();
+
+    var distance = 0;
+    for (var i = 0; i < l1.length; i++) {
+      if (l1[i] != l2[i]) {
+        distance++;
+      }
+    }
+    return distance;
+  }
 }

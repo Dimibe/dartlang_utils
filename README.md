@@ -60,4 +60,6 @@ bool containsAny(String str,List<Pattern> searchPatterns, [int startIndex = 0])
 String abbreviate(String str, int maxWidth, {int offset = 0})
 
 int compare(String str1, String str2)
+
+int hammingDistance(String str1, String str2)
 ```

@@ -48,7 +48,7 @@ void main() {
     expect(StringUtils.abbreviate('0123456789', 5, offset: 2), '23...');
     expect(StringUtils.abbreviate('0123456789', 10, offset: 4), '0123456789');
     expect(StringUtils.abbreviate('0123456789', 9, offset: 4), '...456...');
-    expect(StringUtils.abbreviate("0123456789abcdefg", 10, offset: 8),
+    expect(StringUtils.abbreviate('0123456789abcdefg', 10, offset: 8),
         '...89abcde');
   });
 
@@ -96,5 +96,12 @@ void main() {
     expect(StringUtils.containsAny('abc', ['a', 'd']), true);
     expect(StringUtils.containsAny('abc', ['e', 'd']), false);
     expect(StringUtils.containsAny('abc', ['B', 'c']), true);
+  });
+
+  test('hammingDistance', () {
+    expect(StringUtils.hammingDistance('first', 'third'), 5);
+    expect(StringUtils.hammingDistance('first', 'first'), 0);
+    expect(StringUtils.hammingDistance('house', 'loose'), 2);
+    expect(StringUtils.hammingDistance('house, peter', 'loose; meter'), 4);
   });
 }
