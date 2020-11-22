@@ -37,7 +37,6 @@ void main() {
   });
 
   test('abbreviate', () {
-    expect(StringUtils.abbreviate(null, 1), null);
     expect(StringUtils.abbreviate('', 4), '');
     expect(StringUtils.abbreviate('01', 3), '01');
     expect(StringUtils.abbreviate('0124', 3), '...');

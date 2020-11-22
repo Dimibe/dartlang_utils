@@ -3,47 +3,51 @@ class StringUtils {
   StringUtils._();
 
   /// Null safe check if string is empty.
+  ///
   /// See [String.isEmpty]
-  static bool isEmpty(String str) {
+  static bool isEmpty(String? str) {
     return str == null || str.isEmpty;
   }
 
   /// Null safe check if string is empty.
-  static bool isBlank(String str) {
+  static bool isBlank(String? str) {
     return isEmpty(trim(str));
   }
 
   /// Null safe trim operation on a string.
+  ///
   /// See [String.trim]
-  static String trim(String str) {
+  static String? trim(String? str) {
     return str?.trim();
   }
 
   /// Returns the string itself or a default if the string is `null`.
-  static String defaultString(String str, String defaultStr) {
+  static String defaultString(String? str, String defaultStr) {
     return str ?? defaultStr;
   }
 
   /// Returns the string itself or a default if the string is `null` or empty.
-  static String defaultIfEmpty(String str, String defaultStr) {
-    return isEmpty(str) ? defaultStr : str;
+  static String defaultIfEmpty(String? str, String defaultStr) {
+    return isEmpty(str) ? defaultStr : str!;
   }
 
   /// Returns the string itself or a default if the string is `null` or blank.
-  static String defaultIfBlank(String str, String defaultStr) {
+  static String defaultIfBlank(String? str, String defaultStr) {
     return defaultIfEmpty(trim(str), defaultStr);
   }
 
   /// Null safe check if a string starts with a prefix.
+  ///
   /// See [String.startsWith]
-  static bool startsWith(String str, Pattern prefix, [int index = 0]) {
+  static bool startsWith(String? str, Pattern prefix, [int index = 0]) {
     return str != null && str.startsWith(prefix, index);
   }
 
   /// Null safe check if a string starts with any of given prefixes.
+  ///
   /// See also [String.startsWith]
   static bool startsWithAny(
-    String str,
+    String? str,
     List<Pattern> prefixes, [
     int index = 0,
   ]) {
@@ -52,16 +56,18 @@ class StringUtils {
   }
 
   /// Null safe check if a string contains a search pattern.
+  ///
   /// See [String.contains]
-  static bool contains(String str, Pattern searchPattern,
+  static bool contains(String? str, Pattern searchPattern,
       [int startIndex = 0]) {
     return str != null && str.contains(searchPattern, startIndex);
   }
 
   /// Null safe check if a string contains any of given search patterns.
+  ///
   /// See [String.contains]
   static bool containsAny(
-    String str,
+    String? str,
     List<Pattern> searchPatterns, [
     int startIndex = 0,
   ]) {
@@ -71,9 +77,7 @@ class StringUtils {
 
   /// Abbreviates a String using dots.
   static String abbreviate(String str, int maxWidth, {int offset = 0}) {
-    if (str == null) {
-      return null;
-    } else if (str.length <= maxWidth) {
+    if (str.length <= maxWidth) {
       return str;
     } else if (offset < 3) {
       return '${str.substring(offset, (offset + maxWidth) - 3)}...';
@@ -85,7 +89,7 @@ class StringUtils {
 
   /// Null safe comparison of two strings according their lexical order.
   /// If one string is `null` it is treated as less.
-  static int compare(String str1, String str2) {
+  static int compare(String? str1, String? str2) {
     if (str1 == str2) {
       return 0;
     }
@@ -99,7 +103,7 @@ class StringUtils {
   /// The hamming distance is the number of positions where two strings have
   /// different chars.
   ///
-  /// Therefoer both string must have the same length and must be not null.
+  /// Therefoer both string must have the same length.
   static int hammingDistance(String str1, String str2) {
     if (str1.length != str2.length) {
       throw FormatException('Strings must have the same length');
