@@ -1,3 +1,4 @@
+/// Util class for operations on strings.
 class StringUtils {
   StringUtils._();
 
