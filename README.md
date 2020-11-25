@@ -37,29 +37,31 @@ Currently this package contains the following Utils:
 Currently the following operations are supported: 
 
 ```dart
-bool isEmpty(String str)
+bool isEmpty(String? str)
 
-bool isBlank(String str)
+bool isBlank(String? str)
 
-String trim(String str)
+String? trim(String? str)
 
-String defaultString(String str, String defaultStr)
+String defaultString(String? str, String defaultStr)
 
-String defaultIfEmpty(String str, String defaultStr)
+String defaultIfEmpty(String? str, String defaultStr)
 
-String defaultIfBlank(String str, String defaultStr)
+String defaultIfBlank(String? str, String defaultStr)
 
-bool startsWith(String str, Pattern prefix, [int index = 0])
+bool startsWith(String? str, Pattern prefix, [int index = 0])
 
-bool startsWithAny(String str,List<Pattern> prefixes, [int index = 0])
+bool startsWithAny(String? str,List<Pattern> prefixes, [int index = 0])
 
-bool contains(String str, Pattern searchPattern,[int startIndex = 0])
+bool contains(String? str, Pattern searchPattern,[int startIndex = 0])
 
-bool containsAny(String str,List<Pattern> searchPatterns, [int startIndex = 0])
+bool containsAny(String? str,List<Pattern> searchPatterns, [int startIndex = 0])
 
 String abbreviate(String str, int maxWidth, {int offset = 0})
 
-int compare(String str1, String str2)
+int compare(String? str1, String? str2)
 
 int hammingDistance(String str1, String str2)
+
+int levenshteinDistance(String str1, String str2)
 ```

@@ -103,4 +103,12 @@ void main() {
     expect(StringUtils.hammingDistance('house', 'loose'), 2);
     expect(StringUtils.hammingDistance('house, peter', 'loose; meter'), 4);
   });
+  test('levenshteinDistance', () {
+    expect(StringUtils.levenshteinDistance('test', 'test'), 0);
+    expect(StringUtils.levenshteinDistance('Tor', 'Tier'), 2);
+    expect(StringUtils.levenshteinDistance('Tier', 'Tor'), 2);
+    expect(StringUtils.levenshteinDistance('first', 'third'), 4);
+    expect(StringUtils.levenshteinDistance('house', 'loose'), 2);
+    expect(StringUtils.levenshteinDistance('hi', 'hey'), 2);
+  });
 }

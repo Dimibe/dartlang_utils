@@ -1,7 +1,8 @@
-/// Util class for operations on strings.
-class StringUtils {
-  StringUtils._();
+import '../Matrix.dart';
+import 'MathUtils.dart';
 
+/// Util class for operations on strings.
+abstract class StringUtils {
   /// Null safe check if string is empty.
   ///
   /// See [String.isEmpty]
@@ -9,7 +10,7 @@ class StringUtils {
     return str == null || str.isEmpty;
   }
 
-  /// Null safe check if string is empty.
+  /// Null safe check if string is blank.
   static bool isBlank(String? str) {
     return isEmpty(trim(str));
   }
@@ -119,5 +120,42 @@ class StringUtils {
       }
     }
     return distance;
+  }
+
+  /// Calculates the levenshtein distance between two strings.
+  /// The levenshtein distance is the number of deletions, insertions or
+  /// substitutions needed to transform one string into the other.
+  ///
+  /// Therefoer both string must have the same length.
+  static int levenshteinDistance(String str1, String str2) {
+    if (str1 == str2) {
+      return 0;
+    }
+
+    var l1 = str1.runes.toList();
+    var l2 = str2.runes.toList();
+
+    var matrix = Matrix(l1.length + 1, l2.length + 1);
+
+    matrix.forEach((i, j) {
+      if (i == 0 || j == 0) {
+        if (i == 0) matrix[i][j] = j;
+        if (j == 0) matrix[i][j] = i;
+        return;
+      }
+      if (l1[i - 1] == l2[j - 1]) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+        return;
+      }
+
+      var min = MathUtils.minOf([
+        matrix[i - 1][j - 1],
+        matrix[i - 1][j],
+        matrix[i][j - 1],
+      ]);
+      matrix[i][j] = min + 1;
+    });
+
+    return matrix[l1.length][l2.length] as int;
   }
 }

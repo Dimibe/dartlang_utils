@@ -1,3 +1,1 @@
-library plain_utils;
-
-export 'src/StringUtils.dart';
+export 'src/utils/StringUtils.dart';
