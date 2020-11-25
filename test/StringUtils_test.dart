@@ -40,6 +40,7 @@ void main() {
     expect(StringUtils.abbreviate('', 4), '');
     expect(StringUtils.abbreviate('01', 3), '01');
     expect(StringUtils.abbreviate('0124', 3), '...');
+    expect(StringUtils.abbreviate('0124567890', 6), '012...');
     expect(StringUtils.abbreviate('012345', 4, offset: 4), '...4');
     expect(StringUtils.abbreviate('0123456789', 4), '0...');
     expect(StringUtils.abbreviate('0123456789', 5), '01...');
@@ -110,5 +111,15 @@ void main() {
     expect(StringUtils.levenshteinDistance('first', 'third'), 4);
     expect(StringUtils.levenshteinDistance('house', 'loose'), 2);
     expect(StringUtils.levenshteinDistance('hi', 'hey'), 2);
+  });
+
+  test('random', () {
+    expect(StringUtils.random(length: 10).length, 10);
+    expect(StringUtils.random().length, lessThan(65));
+    expect(StringUtils.random(length: 100), matches(RegExp(r'[A-Za-z0-9]')));
+    expect(
+      StringUtils.random(length: 100, includeNumeric: false),
+      matches(RegExp(r'[A-Za-z]')),
+    );
   });
 }

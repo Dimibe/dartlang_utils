@@ -1,6 +1,5 @@
 import 'package:test/test.dart';
-import 'package:dartlang_utils/dartlang_extensions.dart'
-    show NullableStringExtensions;
+import 'package:dartlang_utils/dartlang_extensions.dart';
 
 void main() {
   test('or', () {

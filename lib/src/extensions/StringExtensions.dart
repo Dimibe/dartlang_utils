@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import '../utils/StringUtils.dart';
 
 extension NullableStringExtensions on String? {
@@ -27,15 +25,9 @@ extension NullableStringExtensions on String? {
 
 extension StringExtensions on String {
   /// Abbreviates a String using dots.
+  ///
+  /// See [StringUtils.abbreviate]
   String abbreviate(int maxWidth, {int offset = 0}) {
     return StringUtils.abbreviate(this, maxWidth, offset: offset);
-  }
-
-  static String random([int? length]) {
-    var rand = Random();
-    length ??= rand.nextInt(64);
-    return String.fromCharCodes(
-      List.generate(length, (index) => Random().nextInt(74) + 48),
-    );
   }
 }

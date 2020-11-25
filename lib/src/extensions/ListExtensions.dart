@@ -23,8 +23,8 @@ extension ListExtensions<T> on List<T> {
   }
 
   /// Returns a random subset of the list with given length.
-  List<T> randomSubset(int length, [int? seed]) {
+  List<T> _randomSubset(int length, [int? seed]) {
     //TODO: Implement
-    return this;
+    return [];
   }
 }
