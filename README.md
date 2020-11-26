@@ -15,7 +15,7 @@ A dart package containing a collection of useful util and extension classes.
  Add the package to your pubspec.yaml:
 
  ```yaml
- dartlang_utils: ^0.2.0-nullsafety.0
+ dartlang_utils: ^0.2.0-nullsafety.1
  ```
  
  In your dart file, import the library. 

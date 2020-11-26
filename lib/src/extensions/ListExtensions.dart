@@ -21,10 +21,4 @@ extension ListExtensions<T> on List<T> {
   T random({int? seed}) {
     return this[math.Random(seed).nextInt(length)];
   }
-
-  /// Returns a random subset of the list with given length.
-  List<T> _randomSubset(int length, {int? seed}) {
-    //TODO: Implement
-    return [];
-  }
 }
