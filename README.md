@@ -36,7 +36,7 @@ A dart package containing a collection of useful util and extension classes.
  Add the package to your pubspec.yaml:
 
  ```yaml
- dartlang_utils: ^0.0.3
+ dartlang_utils: ^0.0.4
  ```
  
  In your dart file, import the library:
