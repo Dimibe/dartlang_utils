@@ -24,7 +24,7 @@
 **/doc/api/
 .dart_tool/
 .packages
-**/pubspec.lock
+pubspec.lock
 .pub-cache/
 .pub/
 build/

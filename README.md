@@ -9,15 +9,17 @@ A dart package containing a collection of useful util and extension classes.
 * String abbreviation function
 * Convenience functions which can be used e.g in iterable.reduce
 * For each function on list with the current item and index
+
 ## Getting Started
 
  Add the package to your pubspec.yaml:
 
  ```yaml
- dartlang_utils: ^0.1.0-nullsafety.0
+ dartlang_utils: ^0.2.0-nullsafety.0
  ```
  
- In your dart file, import the library. There is a seperate import path for utils and extension.
+ In your dart file, import the library. 
+ There is a seperate import path for utils and extension. So in case you want to only use either utils or the extensions, you just can import only the one you want.
 
 If you want to use the **utils** import the following file:
 
@@ -189,6 +191,7 @@ String abbreviate(int maxWidth, {int offset = 0})
 ```
 
 #### NullsafeStringExtensions
+
 Currently the following operations are supported: 
 
 ```dart
