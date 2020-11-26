@@ -1,13 +1,42 @@
 # Utils package for Dart.
 
-A dart package containing useful utils.
+A dart package containing a collection of useful util and extension classes.
+
+## Information
+
+ **The null-safety version of this package is much more advanced and has lots of new featues.**
+
+ Take a look at [pub.dev](https://pub.dev/packages/dartlang_utils/versions/0.2.0-nullsafety.0) or [Github](https://github.com/Dimibe/dartlang_utils/tree/null-safety)
+
+#### Features in the null-safety pre release
+* Null safe boolean checks for true, false, not true and not false
+* Random string generation
+* String similarity functions: Hamming distance and Levenshtein distance
+* String abbreviation function
+* Convenience functions which can be used e.g in iterable.reduce
+* For each function on list with the current item and index
+
+##### Utils in the null-safety pre release
+
+* StringUtils
+* MathUtils
+
+##### Extensions in the null-safety pre release
+
+* BooleanExtensions
+* ListExtensions
+* NumberExtensions
+* StringExtensions
+* NullableStringExtensions
+
+
 
 ## Getting Started
 
  Add the package to your pubspec.yaml:
 
  ```yaml
- dartlang_utils: ^0.0.2
+ dartlang_utils: ^0.0.3
  ```
  
  In your dart file, import the library:

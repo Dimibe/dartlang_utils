@@ -1,3 +1,8 @@
+## [0.0.3] - 26.11.2020
+
+##### Improvements: 
+* Improved readme
+
 ## [0.0.2] - 22.11.2020
 
 ##### New Features: 
