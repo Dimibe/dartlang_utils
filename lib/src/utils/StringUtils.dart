@@ -142,7 +142,7 @@ abstract class StringUtils {
   /// The hamming distance is the number of positions where two strings have
   /// different chars.
   ///
-  /// Therefoer both string must have the same length.
+  /// Therefore both string must have the same length.
   static int hammingDistance(String str1, String str2) {
     if (str1.length != str2.length) {
       throw FormatException('Strings must have the same length');
@@ -163,8 +163,6 @@ abstract class StringUtils {
   /// Calculates the levenshtein distance between two strings.
   /// The levenshtein distance is the number of deletions, insertions or
   /// substitutions needed to transform one string into the other.
-  ///
-  /// Therefoer both string must have the same length.
   static int levenshteinDistance(String str1, String str2) {
     if (str1 == str2) {
       return 0;
