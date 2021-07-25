@@ -24,4 +24,9 @@ abstract class MathUtils {
   static T mult<T extends num>(T n1, T n2) {
     return (n1 * n2) as T;
   }
+
+  /// Convinience method to sum up a list of numbers.
+  static T sumOf<T extends num>(List<T> nums) {
+    return nums.reduce(sum);
+  }
 }
