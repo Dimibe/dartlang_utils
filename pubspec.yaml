@@ -1,6 +1,6 @@
 name: dartlang_utils
 description: A dart package containing a collection of useful util and extension classes.
-version: 0.2.0-nullsafety.1
+version: 0.2.0
 homepage: https://begnis.dev
 repository: https://github.com/Dimibe/dartlang_utils/
 

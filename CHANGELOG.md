@@ -1,3 +1,11 @@
+## [0.2.0] - 09.06.2022
+
+##### New Features: 
+* Support null-safety
+* Add Levenshtein distance to string utils
+* Add MathUtils
+* Add extension classes for bool, list and string.
+
 ## [0.0.4] - 26.11.2020
 
 ##### Fixes: 
