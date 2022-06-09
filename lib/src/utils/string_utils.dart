@@ -1,8 +1,8 @@
 import 'dart:math';
 
-import 'MathUtils.dart';
-import '../Matrix.dart';
-import '../extensions/NumberExtensions.dart';
+import 'math_utils.dart';
+import '../matrix.dart';
+import '../extensions/number_extensions.dart';
 
 /// Util class for operations on strings.
 abstract class StringUtils {
