@@ -1,4 +1,4 @@
-import '../utils/StringUtils.dart';
+import '../utils/string_utils.dart';
 
 extension NullableStringExtensions on String? {
   /// Returns the string itself if not null otherwise the other string.
