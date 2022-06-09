@@ -20,11 +20,14 @@
 # is commented out by default.
 #.vscode/
 
+# Omit commiting pubspec.lock for library packages:
+# https://dart.dev/guides/libraries/private-files#pubspeclock
+pubspec.lock
+
 # Flutter/Dart/Pub related
 **/doc/api/
 .dart_tool/
 .packages
-pubspec.lock
 .pub-cache/
 .pub/
 build/
