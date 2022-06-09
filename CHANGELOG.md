@@ -1,3 +1,13 @@
+## [0.0.4] - 26.11.2020
+
+##### Fixes: 
+* Fix formatting
+
+## [0.0.3] - 26.11.2020
+
+##### Improvements: 
+* Improved readme
+
 ## [0.2.0-nullsafety.1] - 26.11.2020
 
 #### Fixes: 
